@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: "Poppins",sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.card{
+    width:235px;
+    height:210px;
+    background-color: var(--theme-color);
+    box-shadow:rgba(0,0,0,0.24) 0px 3px 8px;
+    border-radius: 15px;
+    margin:0 5px;
+    cursor: pointer;
+}
+.hexagon{
+    width:75px;
+    height:125px;
+    background-color:var(--hex-color);
+    clip-path: polygon(25% 25%, 75% 25%,100% 50%, 75% 75%,25% 75%,0% 50%);
+    justify-content: center;
+    margin: auto;
+    transform: rotate(90deg);
+}
+.hex{
+    position: relative;
+}
+i{
+    color:#fff;
+    font-size:30px;
+    position: absolute;
+    top:-1%;
+    display:flex;
+    height:100%;
+    align-items: center;
+    left:43%;
+}
+h2,p{
+    text-align: center;
+}
+h2{
+    font-size:18px;
+    font-weight:700;
+}
+p{
+    font-size:17px;
+    font-weight:600;
+}
+.row{
+    display:flex;
+}
+@media screen and (max-width:600px){
+    .row{
+        flex-direction: column;
+    }
+    .card{
+        margin:5px;
+    }
+}
+
+.hexagon{
+    animation:rotate 5s infinite forwards;
+}
+@keyframes rotate{
+    0%{
+      transform:rotate(0deg);
+    }
+    50%{
+      transform:rotate(360deg);
+    }
+    100%{
+     transform:rotate(0deg);
+    }
+}
